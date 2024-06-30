@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/registration_background_drawable"
+    tools:context=".security.RegistrationActivity"
+    tools:layout_editor_absoluteX="7dp"
+    tools:layout_editor_absoluteY="87dp">
+
+
+    <EditText
+        android:id="@+id/register_email"
+        android:layout_width="310dp"
+        android:layout_height="42dp"
+        android:layout_marginBottom="4dp"
+        android:hint="@string/registration_email_text"
+        app:layout_constraintBottom_toTopOf="@+id/register_password"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/register_name"
+        android:layout_width="310dp"
+        android:layout_height="42dp"
+        android:layout_marginBottom="8dp"
+        android:hint="Name"
+        app:layout_constraintBottom_toTopOf="@+id/register_email"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/register_password"
+        android:layout_width="310dp"
+        android:layout_height="42dp"
+        android:layout_marginBottom="8dp"
+        android:inputType="textPassword"
+        android:hint="@string/registration_password_placeholder"
+        app:layout_constraintBottom_toTopOf="@+id/register_card_title"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/register_card_title"
+        android:layout_width="310dp"
+        android:layout_height="42dp"
+        android:layout_marginBottom="6dp"
+        android:hint="Title"
+        app:layout_constraintBottom_toTopOf="@+id/register_linkedin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:text="@string/register_text"
+        app:layout_constraintBottom_toTopOf="@+id/register_name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.481"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <EditText
+        android:id="@+id/register_age"
+        android:layout_width="70dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="56dp"
+        android:layout_marginTop="3dp"
+        android:hint="Age"
+        android:inputType="number"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/register_spinner"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/register_linkedin"
+        android:layout_width="310dp"
+        android:layout_height="42dp"
+        android:hint="Linkedin"
+        app:layout_constraintBottom_toTopOf="@+id/register_profilePicture"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/register_profilePicture"
+        android:layout_width="70dp"
+        android:layout_height="66dp"
+        android:src="@drawable/default_profile_picture"
+        app:layout_constraintBottom_toTopOf="@+id/register_spinner"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!--    <Button-->
+    <!--        android:id="@+id/upload_image"-->
+    <!--        style="@style/submit_button"-->
+    <!--        android:layout_width="163dp"-->
+    <!--        android:layout_height="39dp"-->
+    <!--        android:layout_marginBottom="8dp"-->
+    <!--        android:text="Upload Image"-->
+    <!--        app:layout_constraintBottom_toTopOf="@+id/register_spinner"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintHorizontal_bias="0.476"-->
+    <!--        app:layout_constraintStart_toStartOf="parent" />-->
+
+    <Spinner
+        android:id="@+id/register_spinner"
+        android:layout_width="310dp"
+        android:layout_height="42dp"
+        android:layout_marginBottom="4dp"
+        android:hint="Country"
+        app:layout_constraintBottom_toTopOf="@+id/register_drink"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <CheckBox
+        android:id="@+id/register_drink"
+        android:layout_width="130dp"
+        android:layout_height="42dp"
+        android:layout_marginBottom="28dp"
+        android:text="Up for drinks"
+        app:layout_constraintBottom_toTopOf="@+id/button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.677"
+        app:layout_constraintStart_toEndOf="@+id/register_age" />
+
+    <Button
+        android:id="@+id/button"
+        style="@style/submit_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="28dp"
+        android:text="@string/register_text"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:layout_editor_absoluteX="151dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

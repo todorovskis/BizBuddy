@@ -1,0 +1,26 @@
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/navigation_profiles">
+
+    <fragment
+        android:id="@+id/navigation_profiles"
+        android:name="com.example.meetbylocationapp.ProfilesFragment"
+        android:label="Profiles"
+        tools:layout="@layout/fragment_profiles" />
+
+    <fragment
+        android:id="@+id/navigation_profile"
+        android:name="com.example.meetbylocationapp.core.domain.ProfileFragment"
+        android:label="Profile"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:layout="@layout/fragment_profile" />
+
+    <activity
+        android:id="@+id/navigation_logout"
+        android:name="com.example.meetbylocationapp.com.example.meetbylocationapp.MainActivity"
+        android:label="Logout"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:layout="@layout/fragment_profile" />
+</navigation>

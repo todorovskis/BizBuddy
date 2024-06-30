@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- SwipeFlingAdapterView -->
+
+    <!-- Container for DialogFragment, initially hidden -->
+    <com.lorentzos.flingswipe.SwipeFlingAdapterView
+        android:id="@+id/frame"
+        android:layout_width="359dp"
+        android:layout_height="631dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="20dp"
+        android:background="@color/white" />
+
+    <FrameLayout
+        android:id="@+id/fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
+
+</RelativeLayout>

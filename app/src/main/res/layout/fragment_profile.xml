@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ProfileFragment"
+    tools:layout_editor_absoluteX="-26dp"
+    tools:layout_editor_absoluteY="-3dp">
+
+    <!-- res/layout/activity_profile.xml -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/edit_profile_background"
+        android:orientation="vertical"
+        android:padding="16dp"
+        tools:layout_editor_absoluteX="-26dp"
+        tools:layout_editor_absoluteY="-3dp">
+
+
+        <ImageView
+            android:id="@+id/profile_image"
+            android:layout_width="124dp"
+            android:layout_height="124dp"
+            android:src="@drawable/default_profile_picture"
+            app:layout_constraintBottom_toTopOf="@+id/button_upload_image"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_chainStyle="packed" />
+
+        <CheckBox
+            android:id="@+id/check_box_up_for_a_drink"
+            android:layout_width="130dp"
+            android:layout_height="42dp"
+            android:text="Up For A Drink"
+            app:layout_constraintBottom_toTopOf="@+id/button_save"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/spinner_country" />
+
+        <Spinner
+            android:id="@+id/spinner_country"
+            android:layout_width="118dp"
+            android:layout_height="42dp"
+            android:hint="Country"
+            app:layout_constraintBottom_toTopOf="@+id/check_box_up_for_a_drink"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edit_text_age" />
+
+        <EditText
+            android:id="@+id/edit_text_age"
+            android:layout_width="39dp"
+            android:layout_height="42dp"
+            android:hint="Age"
+            android:inputType="number"
+            app:layout_constraintBottom_toTopOf="@+id/spinner_country"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edit_text_title"
+            tools:ignore="MissingConstraints" />
+
+        <Button
+            android:id="@+id/button_upload_image"
+            style="@style/submit_button"
+            android:layout_width="219dp"
+            android:layout_height="41dp"
+            android:text="Upload Image"
+            app:layout_constraintBottom_toTopOf="@+id/edit_text_name"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/profile_image" />
+
+        <EditText
+            android:id="@+id/edit_text_name"
+            android:layout_width="310dp"
+            android:layout_height="42dp"
+            android:hint="Name"
+            app:layout_constraintBottom_toTopOf="@+id/edit_text_email"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/button_upload_image" />
+
+        <EditText
+            android:id="@+id/edit_text_title"
+            android:layout_width="310dp"
+            android:layout_height="42dp"
+            android:hint="Title"
+            app:layout_constraintBottom_toTopOf="@+id/edit_text_age"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edit_text_email" />
+
+        <EditText
+            android:id="@+id/edit_text_email"
+            android:layout_width="310dp"
+            android:layout_height="42dp"
+            android:hint="Email"
+            app:layout_constraintBottom_toTopOf="@+id/edit_text_title"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edit_text_name" />
+
+        <Button
+            android:id="@+id/button_save"
+            style="@style/submit_button"
+            android:layout_width="312dp"
+            android:layout_height="40dp"
+            android:text="Save"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/check_box_up_for_a_drink" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</FrameLayout>

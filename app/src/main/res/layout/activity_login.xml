@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/login_background_drawable"
+    tools:context=".security.RegistrationActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="@string/app_name"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView"
+        app:layout_constraintStart_toEndOf="@+id/imageView"
+        app:layout_constraintTop_toTopOf="@+id/imageView"
+        app:layout_constraintVertical_bias="0.476" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="77dp"
+        android:layout_height="92dp"
+        android:layout_marginStart="124dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/editTextEmail"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.216"
+        app:srcCompat="@drawable/icon" />
+
+
+    <EditText
+        android:id="@+id/editTextEmail"
+        style="@style/edit_text"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_marginBottom="4dp"
+        android:ems="10"
+        android:inputType="text"
+
+        android:hint="@string/registration_email_placeholder"
+        app:layout_constraintBottom_toTopOf="@+id/editTextPassword"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/editTextPassword"
+        style="@style/edit_text"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_marginBottom="4dp"
+        android:ems="10"
+        android:inputType="textPassword"
+        android:hint="@string/registration_password_placeholder"
+        app:layout_constraintBottom_toTopOf="@+id/loginButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <com.google.android.gms.common.SignInButton
+        android:id="@+id/sign_in_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="48dp"
+        app:layout_constraintBottom_toTopOf="@+id/registerTextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/loginButton"
+        style="@style/submit_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="52dp"
+        android:text="@string/login_btn_text"
+        app:layout_constraintBottom_toTopOf="@+id/sign_in_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/registerTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="96dp"
+        android:onClick="onClick"
+        android:text="@string/login_register_text"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

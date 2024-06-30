@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/profile_card_layout"
+    android:layout_width="345dp"
+    android:layout_height="600dp"
+    android:layout_gravity="center_horizontal"
+    android:layout_marginTop="10dp"
+    android:padding="16dp">
+
+    <!-- Background Image or Color Overlay -->
+    <ImageView
+        android:id="@+id/card_image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/default_profile_picture" />
+
+    <!-- Overlay to Dim Background -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#80000000" /> <!-- Semi-transparent black overlay -->
+
+    <!-- ConstraintLayout for Text Content -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp">
+
+        <!-- Name TextView -->
+
+        <!-- Age TextView -->
+
+        <!-- Title TextView -->
+
+
+        <TextView
+            android:id="@+id/card_name"
+            style="@style/card_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="408dp"
+            android:text="John Doe"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/card_title"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/card_title"
+            style="@style/card_text"
+            android:layout_width="145dp"
+            android:layout_height="23dp"
+            android:layout_marginBottom="4dp"
+            android:text="Software Engineer"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toTopOf="@+id/card_country"
+            app:layout_constraintStart_toStartOf="@+id/card_country" />
+
+        <TextView
+            android:id="@+id/card_country"
+            style="@style/card_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="44dp"
+            android:text="United States"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/card_upForADrink"
+            app:layout_constraintHorizontal_bias="0.023"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/card_age"
+            style="@style/card_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="412dp"
+            android:text="25"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/card_distance"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.48" />
+
+        <TextView
+            android:id="@+id/card_upForADrink"
+            style="@style/card_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="44dp"
+            android:text="Up for a drink"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <View
+            android:id="@+id/item_swipe_left_indicator"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_margin="10dp"
+            android:alpha="0"
+            android:background="#A5F"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <View
+            android:id="@+id/item_swipe_right_indicator"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_margin="10dp"
+            android:alpha="0"
+            android:background="#5AF"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <TextView
+            android:id="@+id/card_distance"
+            style="@style/card_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
+            android:text="Distance"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/card_upForADrink"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <TextView
+            android:id="@+id/card_online_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Online"
+            style="@style/card_text"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            tools:layout_editor_absoluteX="6dp"
+            tools:layout_editor_absoluteY="16dp" />
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/group"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:constraint_referenced_ids="card_name,card_age" />
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/group2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:constraint_referenced_ids="card_upForADrink,card_title,card_country" />
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/group3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:constraint_referenced_ids="card_name" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>
